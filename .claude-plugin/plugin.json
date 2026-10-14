@@ -1,0 +1,11 @@
+{
+  "name": "sagecut",
+  "displayName": "SageCut",
+  "version": "0.3.0",
+  "description": "House-standard QA for Remotion videos in your brand. Every frame is measured and read by the Sage decision model.",
+  "author": { "name": "Levanto Labs", "url": "https://levanto.ai" },
+  "homepage": "https://github.com/levantolabs/sagecut",
+  "repository": "https://github.com/levantolabs/sagecut",
+  "license": "MIT",
+  "keywords": ["remotion", "video", "qa", "brand", "sage"]
+}

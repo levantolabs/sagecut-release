@@ -1,0 +1,21 @@
+{
+  "name": "sagecut",
+  "version": "0.3.0",
+  "description": "SageCut: house-standard video QA for Remotion, with every frame checked by Sage.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test \"test/unit/*.test.mjs\"",
+    "dev": "node src/cli.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "tesseract.js": "7.0.0",
+    "yaml": "2.9.1"
+  }
+}

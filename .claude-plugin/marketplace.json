@@ -1,0 +1,15 @@
+{
+  "name": "levantolabs",
+  "description": "Plugins from Levanto Labs",
+  "owner": { "name": "Levanto Labs", "url": "https://levanto.ai" },
+  "plugins": [
+    {
+      "name": "sagecut",
+      "source": "./",
+      "description": "House-standard QA for Remotion videos in your brand. Every frame is measured and read by the Sage decision model.",
+      "version": "0.3.0",
+      "license": "MIT",
+      "keywords": ["remotion", "video", "qa", "brand", "sage"]
+    }
+  ]
+}

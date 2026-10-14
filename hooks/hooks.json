@@ -1,0 +1,40 @@
+{
+  "description": "SageCut: one welcome line at the first session after installation; a session marker; a savings line when a film is delivered.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/welcome.mjs"],
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/bin/sagecut.mjs", "savings", "session-start"],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/bin/sagecut.mjs", "savings", "stop"],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
