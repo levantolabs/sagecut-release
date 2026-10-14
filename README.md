@@ -2,7 +2,7 @@
 
 House-standard QA for Remotion videos, in your brand, with every frame checked by Sage.
 
-SageCut is a Claude Code plugin. You build your video with Remotion and Claude. SageCut then:
+SageCut is available as a Claude Code plugin and a standalone skill. You build your video with Remotion and Claude. SageCut then:
 
 1. measures every frame in code (text size, blank frames, frozen frames, off-brand colours, delivery spec),
 2. has the Sage decision model read every frame and answer yes/no questions,
@@ -14,6 +14,22 @@ It ships with a set of house rules (a quality floor) and reads your brand file f
 SageCut does not change your render time. It makes the review step faster and cheaper.
 
 ## Install
+
+### Standalone skill via skills.sh
+
+Run this from your Remotion project:
+
+```bash
+npx skills add levantolabs/sagecut-release --skill sagecut -a claude-code
+```
+
+Add `-g` to install for all your Claude Code projects. Then ask Claude Code: "Use SageCut to review my Remotion video at out/video.mp4."
+
+The skill includes the CLI, OCR runtime and language data, question banks, templates, and QA references. Setup and savings reporting run through the skill; this install does not register plugin hooks. The full workflow and critic cost accounting require Claude Code. The Sage API key requirement below applies to full frame review; `gate --no-sage` runs local measurements only.
+
+The standalone skill lives in [`.agents/skills/sagecut`](.agents/skills/sagecut). The `start` and `qa` components under `skills/` belong to the Claude plugin and are hidden from normal skills CLI discovery.
+
+### Claude Code plugin
 
 In Claude Code, run two commands:
 
@@ -28,7 +44,7 @@ Or one command (Claude Code 2.1.275 or later):
 /plugin install sagecut --marketplace levantolabs/sagecut-release
 ```
 
-## First run
+## First run with the plugin
 
 Type this in Claude Code:
 
@@ -87,3 +103,9 @@ SageCut needs no Python, no separate ffmpeg and no OCR program. It uses the ffmp
 ## License
 
 MIT. Copyright (c) 2026 Levanto Labs. See [LICENSE](LICENSE).
+
+## Packaging the standalone skill
+
+`npm run build` builds the CLI and regenerates the portable package. To refresh the portable package from the already built release files, run `npm run package:skill`.
+
+The packager copies the release runtime and reference material, and adapts the setup and QA instructions for standalone use. Maintain those sources in `bin/`, `assets/`, `templates/`, and `skills/`; generated files under `.agents/skills/sagecut/runtime/` and `references/` should be refreshed with the packager. The portable entrypoint and launcher are maintained directly.

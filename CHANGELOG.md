@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added a standalone `sagecut` skill for the skills CLI, with the release runtime, OCR assets, templates, and QA references included.
+- Added `npm run package:skill`; `npm run build` now refreshes that package too.
+- Marked the plugin's `start` and `qa` components internal to normal skills CLI discovery.
+
 ## 0.3.0
 
 First public release.

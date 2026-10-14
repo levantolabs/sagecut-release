@@ -9,7 +9,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && node scripts/package-skill.mjs",
+    "package:skill": "node scripts/package-skill.mjs",
     "test": "node --test \"test/unit/*.test.mjs\"",
     "dev": "node src/cli.mjs"
   },

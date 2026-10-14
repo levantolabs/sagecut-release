@@ -1,0 +1,33 @@
+{
+ "problems": {
+  "cut": "Is any word or letter cut off by the edge of the picture, broken, or partly hidden by something?",
+  "over": "Does any text sit on top of a busy picture, shape or object, instead of on a plain background, so that the letters are harder to read?",
+  "overlap": "Does any text overlap other text, so that the letters touch or cross?",
+  "glitch": "Is there a visible rendering glitch in this picture: a dark band, a smear, a hole, a torn or doubled shape, or a stray object?"
+ },
+ "legible": "Can you read every large word and number in this picture?",
+ "pmin": 0.8,
+ "triage": {
+  "cut": {
+   "bad": "yes", "width": 960, "control": "cut",
+   "questions": [
+    "Is any word or label cut off by the edge of the picture, or partly hidden?",
+    "Does any text run past the edge of the picture so that part of a letter is missing?"
+   ]
+  },
+  "overlap": {
+   "bad": "yes", "width": 960, "control": "ghost",
+   "questions": [
+    "Do the letters of any word or label touch or cross the letters of another word or label?",
+    "Is any word or label partly covered by another label?"
+   ]
+  },
+  "legible": {
+   "bad": "no", "width": "test", "control": "ghost",
+   "questions": [
+    "Can you read every headline word?",
+    "Can you read every large word and number in this picture?"
+   ]
+  }
+ }
+}

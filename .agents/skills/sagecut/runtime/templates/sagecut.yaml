@@ -1,0 +1,8 @@
+# SageCut settings for this project. Every key is optional.
+# schedule: sagecut/schedule.json
+# brand: sagecut/brand.yaml
+# plan: developer          # developer | starter | pro | growth
+# workers: 4
+# test_width: 350          # else from the brand format
+audio: auto               # auto: no audio track gives a warning | required: no audio track fails | none: silent by design, skip loudness and silence checks
+# composition: __COMPOSITION__

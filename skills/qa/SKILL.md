@@ -6,6 +6,7 @@ compatibility: Requires Claude Code, Node 18 or later, a Remotion 4 project, and
 metadata:
   author: Levanto Labs
   version: "0.3.0"
+  internal: true
 allowed-tools: Bash(node *) Bash(npx remotion *)
 ---
 
