@@ -17,6 +17,8 @@ SageCut does not change your render time. It makes the review step faster and ch
 
 ### Standalone skill via skills.sh
 
+[View SageCut on skills.sh](https://skills.sh/levantolabs/sagecut-release/sagecut).
+
 Run this from your Remotion project:
 
 ```bash
