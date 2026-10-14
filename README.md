@@ -18,14 +18,14 @@ SageCut does not change your render time. It makes the review step faster and ch
 In Claude Code, run two commands:
 
 ```
-/plugin marketplace add levantolabs/sagecut
+/plugin marketplace add levantolabs/sagecut-release
 /plugin install sagecut@levantolabs
 ```
 
 Or one command (Claude Code 2.1.275 or later):
 
 ```
-/plugin install sagecut --marketplace levantolabs/sagecut
+/plugin install sagecut --marketplace levantolabs/sagecut-release
 ```
 
 ## First run
